@@ -1,0 +1,21 @@
+1
+Tehnička Oprema
+Kategorija koja obuhvaća sve vrste tehničke opreme, uključujući računalnu opremu, elektroniku, alate i druge tehničke uređaje.
+2
+Hrana
+Kategorija hrane s raznovrsnim prehrambenim proizvodima, uključujući svježe namirnice, konzervirane proizvode, grickalice i razne specijalitete.
+3
+Sport i rekreacija
+Sportska oprema, odjeća i obuća za sportske aktivnosti, bicikli, sportski gadgeti i oprema za rekreaciju.
+4
+Igračke za djecu
+Kategorija obuhvaća raznovrsne igračke prilagođene djeci svih uzrasta.
+5
+Knjige i uredski materijali
+Kategorija obuhvaća širok spektar knjiga, od beletristike do stručne literature, uz dodatak uredskih potrepština poput bilježnica i olovaka.
+6
+Kućni dekor i namještaj
+Ukrasni predmeti, svjetiljke, tepisi te raznovrsni komadi namještaja za unapređenje interijera doma.
+7
+Kozmetika i ljepota
+Šminke, proizvodi za njegu kože, parfemi i sve ostalo što pomaže u održavanju ljepote i osobne njege.

@@ -1,0 +1,35 @@
+100
+Trgovina zdravom hranom
+www.zdrava-trgovina.hr
+1002, 1003, 1008, 1009
+Store
+101
+Trgovina laptopima
+www.laptop-store.hr
+1001
+Technical Store
+102
+Trgovina jabukama
+www.jabuka-store.hr
+1002, 1009
+Apple Store
+103
+Trgovina knjigama
+www.knjiga-store.hr
+1010
+Store
+104
+Kikiriki trgovina
+www.kikiriki-store.hr
+1003, 1008
+Peanut Store
+105
+Costco
+www.costco.hr
+1000, 1001, 1003, 1004, 1005, 1006, 1007
+Store
+106
+Walmart
+www.walmart.hr
+1000, 1001, 1003, 1007, 1008, 1009, 1010
+Store

@@ -1,0 +1,32 @@
+501
+Tvornica jabuka
+100000
+1002, 1009
+502
+Tvornica kikirikija
+100001
+1003, 1008
+503
+TKZ Tvornica knjiga
+100002
+1010
+504
+Tvornica laptopa
+100003
+1001
+505
+Tvornica patika za trčanje
+100004
+1000, 1004
+506
+Tvornica hrane
+100005
+1002, 1003, 1008, 1009
+507
+Tvornica igračaka
+100006
+1005, 1006
+508
+Tvornica mobitela
+1007
+100007

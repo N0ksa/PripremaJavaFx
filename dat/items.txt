@@ -1,0 +1,115 @@
+1000
+Nike Pegasus Trail 4
+3
+10
+5.5
+28
+95
+150
+10
+Item
+1001
+Asus G56JR
+1
+35
+2.5
+24
+250
+330
+5
+Laptop
+12
+1002
+Fuji
+2
+7
+8.5
+7.5
+1.2
+1.6
+20
+Apple
+2.5
+1003
+Crunchy Peanut
+2
+8
+15
+8
+3.5
+5.5
+0
+Peanut
+1.2
+1004
+Adidas Adios 8
+3
+9.8
+5.7
+30
+75
+120
+20
+Item
+1005
+Autić na daljinski
+4
+12
+8
+20
+35
+55
+0
+Item
+1006
+Društvena igra "Monopoly"
+4
+50.8
+1.1
+50.8
+15
+25
+5
+Item
+1007
+Samsung A57
+1
+8.5
+1.1
+14.4
+280
+340
+25
+Item
+1008
+Smooth Peanut
+2
+8
+15
+8
+3
+5
+5
+Peanut
+1.2
+1009
+Granny Smith
+2
+7
+8.5
+7.5
+1.2
+1.6
+20
+Apple
+1
+1010
+Robert M.Sapolsky - Determined
+5
+14
+2.5
+21.6
+5
+15
+20
+Item
