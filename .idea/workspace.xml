@@ -5,56 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/addresses.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/categories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/factories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/items.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/serialized-factories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/serialized-stores.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dat/stores.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/constants/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/enums/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/enums/MaxLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/enums/ValidationRegex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/DuplicateCategoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/DuplicateFactoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/DuplicateItemException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/DuplicateStoreException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/InputPredicateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/NoSuchCityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/SameItemSelectedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/genericsi/FoodStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/genericsi/TechnicalStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Discount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Edible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Laptop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/NamedEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/PeanutButter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Technical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileReaderUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/SafeInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/SerializationUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +21,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2YGvL0C1mPv0fnNnVIEXwsrI9fP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -87,7 +39,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 7/sarko-07",
+    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/sarko-07",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,6 +89,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
