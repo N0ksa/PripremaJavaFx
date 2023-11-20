@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="hr.java.production.MenuController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="28.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.production.MenuController">
+
+    <MenuBar prefHeight="28.0" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Category">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#showCategoriesScreen" text="Search" />
+            </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Item">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Search" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Factory">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showFactoriesScreen" text="Search" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Store">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showStoresScreen" text="Search" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
 
 </AnchorPane>
-
