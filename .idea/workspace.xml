@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/FactorySearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/StoreSearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/factory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/store.fxml" afterDir="false" />
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Povezao menu s ostalim xml datotekama tako što sam ga includao, a ne kopirao svaki put.&#10;&#10;-dodao ostatak grafičkog izgleda i osposobio search button za svaku scenu.&#10;&#10;-potrebno je još urediti grafičko sučelje, dodati početni screen i ostatak funkcionalnosti.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/MainScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/items.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/JavaFxApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/category.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" afterDir="false" />
@@ -72,8 +70,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="hr.java.production.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hr.java.production.HelloApplication" />
+    <configuration name="JavaFxApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hr.java.production.JavaFxApplication" />
       <module name="sarko-07" />
       <extension name="coverage">
         <pattern>
@@ -87,7 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.hr.java.production.HelloApplication" />
+        <item itemvalue="Application.JavaFxApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -101,7 +99,7 @@
       <updated>1700164673030</updated>
       <workItem from="1700164674027" duration="5675000" />
       <workItem from="1700250464697" duration="30000" />
-      <workItem from="1700506707093" duration="7380000" />
+      <workItem from="1700506707093" duration="9450000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -110,7 +108,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1700217508653</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Povezao menu s ostalim xml datotekama tako što sam ga includao, a ne kopirao svaki put.&#10;&#10;-dodao ostatak grafičkog izgleda i osposobio search button za svaku scenu.&#10;&#10;-potrebno je još urediti grafičko sučelje, dodati početni screen i ostatak funkcionalnosti.">
+      <option name="closed" value="true" />
+      <created>1700514109346</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1700514109346</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju." />
-    <option name="LAST_COMMIT_MESSAGE" value="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju." />
+    <MESSAGE value="Povezao menu s ostalim xml datotekama tako što sam ga includao, a ne kopirao svaki put.&#10;&#10;-dodao ostatak grafičkog izgleda i osposobio search button za svaku scenu.&#10;&#10;-potrebno je još urediti grafičko sučelje, dodati početni screen i ostatak funkcionalnosti." />
+    <option name="LAST_COMMIT_MESSAGE" value="Povezao menu s ostalim xml datotekama tako što sam ga includao, a ne kopirao svaki put.&#10;&#10;-dodao ostatak grafičkog izgleda i osposobio search button za svaku scenu.&#10;&#10;-potrebno je još urediti grafičko sučelje, dodati početni screen i ostatak funkcionalnosti." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

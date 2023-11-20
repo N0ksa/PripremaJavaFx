@@ -16,7 +16,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Item">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="Search" />
+                    <MenuItem mnemonicParsing="false" onAction="#showItemsScreen" text="Search" />
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Factory">
