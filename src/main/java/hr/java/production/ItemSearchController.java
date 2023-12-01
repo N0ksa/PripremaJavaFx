@@ -9,6 +9,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
 
@@ -16,12 +17,12 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ItemSearchController {
+public class ItemSearchController{
 
     @FXML
     private TextField itemNameTextField;
     @FXML
-    private ComboBox<Category> categoryComboBox;
+    private ComboBox<String> categoryComboBox;
     @FXML
     private TableView<Item> itemsTableView;
 
@@ -42,6 +43,14 @@ public class ItemSearchController {
 
 
     public void initialize(){
+
+        List<String> categoryList = FileReaderUtil.getCategoriesFromFile()
+                .stream().map(category -> category.getName())
+                .collect(Collectors.toList());
+
+        ObservableList<String> observableCategoryList = FXCollections.observableList(categoryList);
+        categoryComboBox.setItems(observableCategoryList);
+
         itemNameTableColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Item,String>, ObservableValue<String>>() {
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Item, String> param) {
                 return new ReadOnlyStringWrapper(param.getValue().getName());
@@ -85,16 +94,15 @@ public class ItemSearchController {
         });
     }
 
-
-
     public void itemSearch(){
         List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
         List<Item> itemList = FileReaderUtil.getItemsFromFile(categoryList);
 
+        String itemCategoryText = categoryComboBox.getValue();
         String itemName = itemNameTextField.getText();
 
         List<Item> filtereditemList = itemList.stream()
-                .filter(item -> item.getName().contains(itemName))
+                .filter(item -> item.getName().contains(itemName) && item.getCategory().getName().equalsIgnoreCase(itemCategoryText))
                 .collect(Collectors.toList());
 
         ObservableList<Item> observableItemList = FXCollections.observableList(filtereditemList);

@@ -14,7 +14,7 @@ public class JavaFxApplication extends Application {
     public void start(Stage stage) throws IOException {
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("mainScreen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 630);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Priprema 7");
         stage.setScene(scene);
         stage.show();
