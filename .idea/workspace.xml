@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Do kraja napravio pripremu tako što sam u combo box dodao imena svih kategorija.&#10;&#10;- sada se kod pritiska search gumba pretražuju artikli prema imenu i prema odabranoj kategoriji.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/ValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileWriterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewCategory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Počeo raditi 8. pripremu. Dodao grafičko sučelje za dodavanje novog artikla i kategorije&#10;&#10;-dodao i logiku kojom se dodaju artikli i kategorije&#10;-dodao novu klasu FileWriterUtil.java koja će služiti za zapisivanje novih informacija u datoteke&#10;-u slučaju korisnikovog krivog unosa, artikl ili kategorija neće biti dodana u datoteku te će se korisniku pokazati alert.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewFactoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewStoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewFactory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewStore.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dat/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dat/categories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dat/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dat/items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Edible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Edible.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileReaderUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +47,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_directory_selection": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 8/sarko-08/src/main/java/hr/java/production",
-    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 7/sarko-07",
+    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 8/sarko-08/src/main/resources/hr/java/production",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +58,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 8\sarko-08\src\main\resources\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07\src\main\resources\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07\src\main\java\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07" />
@@ -111,7 +103,7 @@
       <workItem from="1701443740157" duration="3361000" />
       <workItem from="1701631479429" duration="206000" />
       <workItem from="1701692923981" duration="21000" />
-      <workItem from="1701878905629" duration="10300000" />
+      <workItem from="1701878905629" duration="14879000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -141,7 +133,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1701446380712</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Počeo raditi 8. pripremu. Dodao grafičko sučelje za dodavanje novog artikla i kategorije&#10;&#10;-dodao i logiku kojom se dodaju artikli i kategorije&#10;-dodao novu klasu FileWriterUtil.java koja će služiti za zapisivanje novih informacija u datoteke&#10;-u slučaju korisnikovog krivog unosa, artikl ili kategorija neće biti dodana u datoteku te će se korisniku pokazati alert.">
+      <option name="closed" value="true" />
+      <created>1701889363316</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1701889363316</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +162,8 @@
     <MESSAGE value="Povezao menu s ostalim xml datotekama tako što sam ga includao, a ne kopirao svaki put.&#10;&#10;-dodao ostatak grafičkog izgleda i osposobio search button za svaku scenu.&#10;&#10;-potrebno je još urediti grafičko sučelje, dodati početni screen i ostatak funkcionalnosti." />
     <MESSAGE value="Dodao glavni screen" />
     <MESSAGE value="Do kraja napravio pripremu tako što sam u combo box dodao imena svih kategorija.&#10;&#10;- sada se kod pritiska search gumba pretražuju artikli prema imenu i prema odabranoj kategoriji." />
-    <option name="LAST_COMMIT_MESSAGE" value="Do kraja napravio pripremu tako što sam u combo box dodao imena svih kategorija.&#10;&#10;- sada se kod pritiska search gumba pretražuju artikli prema imenu i prema odabranoj kategoriji." />
+    <MESSAGE value="Počeo raditi 8. pripremu. Dodao grafičko sučelje za dodavanje novog artikla i kategorije&#10;&#10;-dodao i logiku kojom se dodaju artikli i kategorije&#10;-dodao novu klasu FileWriterUtil.java koja će služiti za zapisivanje novih informacija u datoteke&#10;-u slučaju korisnikovog krivog unosa, artikl ili kategorija neće biti dodana u datoteku te će se korisniku pokazati alert." />
+    <option name="LAST_COMMIT_MESSAGE" value="Počeo raditi 8. pripremu. Dodao grafičko sučelje za dodavanje novog artikla i kategorije&#10;&#10;-dodao i logiku kojom se dodaju artikli i kategorije&#10;-dodao novu klasu FileWriterUtil.java koja će služiti za zapisivanje novih informacija u datoteke&#10;-u slučaju korisnikovog krivog unosa, artikl ili kategorija neće biti dodana u datoteku te će se korisniku pokazati alert." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

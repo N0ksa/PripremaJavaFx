@@ -110,4 +110,32 @@ public class MenuController {
             throw new RuntimeException(e);
         }
     }
+
+    public void showAddNewStoresScreen(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addNewStore.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Category");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showAddNewFactoriesScreen(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addNewFactory.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Category");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -23,11 +23,13 @@
             <Menu mnemonicParsing="false" text="Factory">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#showFactoriesScreen" text="Search" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddNewFactoriesScreen" text="Add new Factory" />
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Store">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#showStoresScreen" text="Search" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddNewStoresScreen" text="Add new Store" />
                 </items>
             </Menu>
          <Menu mnemonicParsing="false" text="Category">
