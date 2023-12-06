@@ -1,5 +1,6 @@
 package hr.java.production;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
@@ -81,4 +82,32 @@ public class MenuController {
     }
 
 
+    public void showAddNewItem(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addNewItem.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Item");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void showAddNewCategory(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addNewCategory.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Category");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

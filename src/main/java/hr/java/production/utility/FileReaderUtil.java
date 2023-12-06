@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class FileReaderUtil {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(FileReaderUtil.class);
+        private static final Logger logger = LoggerFactory.getLogger(FileReaderUtil.class);
 
 
     /**

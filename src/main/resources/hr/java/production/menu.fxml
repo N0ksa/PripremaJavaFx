@@ -17,6 +17,7 @@
             <Menu mnemonicParsing="false" text="Item">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#showItemsScreen" text="Search" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddNewItem" text="Add new Item" />
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Factory">
@@ -32,6 +33,7 @@
          <Menu mnemonicParsing="false" text="Category">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#showCategoriesScreen" text="Search" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddNewCategory" text="Add new Category" />
             </items>
          </Menu>
         </menus>

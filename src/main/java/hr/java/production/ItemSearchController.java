@@ -15,6 +15,7 @@ import javafx.util.Callback;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class ItemSearchController{
@@ -101,9 +102,12 @@ public class ItemSearchController{
         String itemCategoryText = categoryComboBox.getValue();
         String itemName = itemNameTextField.getText();
 
-        List<Item> filtereditemList = itemList.stream()
-                .filter(item -> item.getName().contains(itemName) && item.getCategory().getName().equalsIgnoreCase(itemCategoryText))
-                .collect(Collectors.toList());
+        List<Item> filtereditemList = itemList.stream().filter(item -> item.getName().contains(itemName)).collect(Collectors.toList());
+        if(itemCategoryText != null){
+            filtereditemList = filtereditemList.stream().filter(item -> item.getCategory().getName().equalsIgnoreCase(itemCategoryText)).collect(Collectors.toList());
+        }
+
+
 
         ObservableList<Item> observableItemList = FXCollections.observableList(filtereditemList);
         itemsTableView.setItems(observableItemList);

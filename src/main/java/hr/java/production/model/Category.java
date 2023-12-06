@@ -40,4 +40,9 @@ public class Category extends NamedEntity implements Serializable {
     public int hashCode() {
         return Objects.hash(name, description);
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

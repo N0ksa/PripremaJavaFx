@@ -19,4 +19,5 @@ public interface Edible {
      * @return BigDecimal - cijena jestivog artikla kao BigDecimal vrijednost.
      */
     public BigDecimal calculatePrice();
+    public BigDecimal getWeight();
 }
