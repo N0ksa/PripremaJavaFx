@@ -8,7 +8,7 @@
 
 
     <fx:include source="menu.fxml" />
-   <Label layoutX="144.0" layoutY="47.0" text="Java Priprema7 application">
+   <Label layoutX="144.0" layoutY="47.0" text="Java Priprema 8 application">
       <font>
          <Font name="System Bold Italic" size="24.0" />
       </font>

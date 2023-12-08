@@ -1,13 +1,13 @@
 100
 Trgovina zdravom hranom
 www.zdrava-trgovina.hr
-1002, 1003, 1008, 1009
+1002, 1009, 1003, 1008
 Store
 101
 Trgovina laptopima
 www.laptop-store.hr
 1001
-Technical Store
+Technical store
 102
 Trgovina jabukama
 www.jabuka-store.hr
@@ -26,10 +26,15 @@ Peanut Store
 105
 Costco
 www.costco.hr
-1000, 1001, 1003, 1004, 1005, 1006, 1007
+1001, 1000, 1004, 1006, 1007, 1003, 1005
 Store
 106
 Walmart
 www.walmart.hr
-1000, 1001, 1003, 1007, 1008, 1009, 1010
+1001, 1000, 1009, 1007, 1010, 1003, 1008
+Store
+107
+Trgovina sa svime
+www.trgovina-svime.hr
+1002, 1001, 1000, 1006, 1009, 1003, 1008
 Store

@@ -21,12 +21,20 @@ Tvornica patika za trčanje
 506
 Tvornica hrane
 100005
-1002, 1003, 1008, 1009
+1002, 1009, 1003, 1008
 507
 Tvornica igračaka
 100006
-1005, 1006
+1006, 1005
 508
-Tvornica mobitela
-1007
-100007
+Shoes Factory
+1000007
+1000, 1004, 1011
+509
+Mobile Factory
+100004
+1001
+510
+Borovo
+100002
+1000, 1011
