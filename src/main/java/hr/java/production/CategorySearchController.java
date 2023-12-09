@@ -2,6 +2,7 @@ package hr.java.production;
 
 import hr.java.production.model.Category;
 import hr.java.production.model.Item;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ObservableValue;
@@ -46,7 +47,8 @@ public class CategorySearchController {
 
 
     public void categorySearch(){
-        List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
+        //List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
+        List<Category> categoryList = DatabaseUtil.getCategories();
 
         String categoryName = categoryNameTextField.getText();
 

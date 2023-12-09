@@ -3,6 +3,7 @@ package hr.java.production;
 import hr.java.production.constants.Constants;
 import hr.java.production.model.Category;
 import hr.java.production.model.Item;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ObservableValue;
@@ -96,8 +97,10 @@ public class ItemSearchController{
     }
 
     public void itemSearch(){
-        List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
-        List<Item> itemList = FileReaderUtil.getItemsFromFile(categoryList);
+        //List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
+        //List<Item> itemList = FileReaderUtil.getItemsFromFile(categoryList);
+
+        List<Item> itemList = DatabaseUtil.getItems();
 
         String itemCategoryText = categoryComboBox.getValue();
         String itemName = itemNameTextField.getText();

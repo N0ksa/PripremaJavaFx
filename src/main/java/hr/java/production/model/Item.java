@@ -27,7 +27,6 @@ public class Item extends NamedEntity implements Serializable {
      * @param length Duljina artikla (cm).
      * @param productionCost Cijena proizvodnje artikla u eurima.
      * @param sellingPrice Prodajna cijena artikla u eurima.
-     * @param discount Popust na artiklu u postotcima.
      */
     public Item(Long id, String name, Category category, BigDecimal width, BigDecimal height, BigDecimal length,
                 BigDecimal productionCost, BigDecimal sellingPrice, Discount discount) {
