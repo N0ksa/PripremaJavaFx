@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Dodao grafičko sučelje za dodavanje trgovine i tvornice.&#10;&#10;-povezao elemente grafičkog sučelja sa kontrolerima.&#10;-potrebno napisati logiku unosa novih tvornica i trgovina u datoteke">
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Završio 8.pripremu&#10;&#10;-dodao mogućnost dodavanja trgovina i tvornica putem grafičkog sučelja.&#10;-dodao provjeru validnosti unosa podataka od strane korisnika (u slučaju kada korisnik krivo unese ne dolazi do zapisivanja u datoteku)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dat/factories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dat/factories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dat/stores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dat/stores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewFactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewStoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/JavaFxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/JavaFxApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/exception/ValidationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileWriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/FileWriterUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewFactory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewFactory.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,9 @@
       <workItem from="1701631479429" duration="206000" />
       <workItem from="1701692923981" duration="21000" />
       <workItem from="1701878905629" duration="15152000" />
-      <workItem from="1702048690169" duration="5272000" />
+      <workItem from="1702048690169" duration="5443000" />
+      <workItem from="1702062993416" duration="74000" />
+      <workItem from="1702140002265" duration="1027000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -149,7 +147,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1701895123389</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Završio 8.pripremu&#10;&#10;-dodao mogućnost dodavanja trgovina i tvornica putem grafičkog sučelja.&#10;-dodao provjeru validnosti unosa podataka od strane korisnika (u slučaju kada korisnik krivo unese ne dolazi do zapisivanja u datoteku)">
+      <option name="closed" value="true" />
+      <created>1702054057200</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1702054057200</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +178,8 @@
     <MESSAGE value="Do kraja napravio pripremu tako što sam u combo box dodao imena svih kategorija.&#10;&#10;- sada se kod pritiska search gumba pretražuju artikli prema imenu i prema odabranoj kategoriji." />
     <MESSAGE value="Počeo raditi 8. pripremu. Dodao grafičko sučelje za dodavanje novog artikla i kategorije&#10;&#10;-dodao i logiku kojom se dodaju artikli i kategorije&#10;-dodao novu klasu FileWriterUtil.java koja će služiti za zapisivanje novih informacija u datoteke&#10;-u slučaju korisnikovog krivog unosa, artikl ili kategorija neće biti dodana u datoteku te će se korisniku pokazati alert." />
     <MESSAGE value="Dodao grafičko sučelje za dodavanje trgovine i tvornice.&#10;&#10;-povezao elemente grafičkog sučelja sa kontrolerima.&#10;-potrebno napisati logiku unosa novih tvornica i trgovina u datoteke" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodao grafičko sučelje za dodavanje trgovine i tvornice.&#10;&#10;-povezao elemente grafičkog sučelja sa kontrolerima.&#10;-potrebno napisati logiku unosa novih tvornica i trgovina u datoteke" />
+    <MESSAGE value="Završio 8.pripremu&#10;&#10;-dodao mogućnost dodavanja trgovina i tvornica putem grafičkog sučelja.&#10;-dodao provjeru validnosti unosa podataka od strane korisnika (u slučaju kada korisnik krivo unese ne dolazi do zapisivanja u datoteku)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Završio 8.pripremu&#10;&#10;-dodao mogućnost dodavanja trgovina i tvornica putem grafičkog sučelja.&#10;-dodao provjeru validnosti unosa podataka od strane korisnika (u slučaju kada korisnik krivo unese ne dolazi do zapisivanja u datoteku)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

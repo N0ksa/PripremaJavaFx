@@ -1,5 +1,8 @@
 package hr.java.production.exception;
 
+/**
+ * Baci se u slučaju kada nije prošla provjera unešenih podataka od strane korisnika.
+ */
 public class ValidationException extends RuntimeException {
     public ValidationException() {
     }

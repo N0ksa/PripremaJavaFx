@@ -20,6 +20,14 @@ public class FileWriterUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(FileReaderUtil.class);
 
+
+    /**
+     * Vraća id sljedećeg artikla.
+     * Ova metoda pretražuje postojeće artikle iz datoteke koristeći {@link FileReaderUtil},
+     * određuje najveći id među njima i vraća id sljedećeg artikla  kao id najvećeg plus jedan.
+     *
+     * @return Id sljedećeg artikla.
+     */
     public static Long getNextItemId() {
         List<Item> items = FileReaderUtil.getItemsFromFile(getCategoriesFromFile());
 
@@ -27,12 +35,28 @@ public class FileWriterUtil {
         return itemId + 1;
     }
 
+
+    /**
+     * Vraća id sljedeće kategorije.
+     * Ova metoda pretražuje postojeće kategorije iz datoteke koristeći {@link FileReaderUtil},
+     * određuje najveći id među njima i vraća id sljedeće kategorije  kao id najvećeg plus jedan.
+     *
+     * @return Id sljedeće kategorije.
+     */
     public static Long getNextCategoryId() {
         List<Category> categories = FileReaderUtil.getCategoriesFromFile();
 
         Long itemId = categories.stream().map(NamedEntity::getId).max(Long::compareTo).get();
         return itemId + 1;
     }
+
+    /**
+     * Vraća id sljedeće tvornice.
+     * Ova metoda pretražuje postojeće tvornice iz datoteke koristeći {@link FileReaderUtil},
+     * određuje najveći id među njima i vraća id sljedeće tvornice kao id najvećeg plus jedan.
+     *
+     * @return Id sljedeće tvornice.
+     */
 
     public static Long getNextFactoryId(){
         List<Factory> factories = FileReaderUtil.getFactoriesFromFile(getItemsFromFile(getCategoriesFromFile()), getAdressesFromFile());
@@ -41,6 +65,14 @@ public class FileWriterUtil {
 
     }
 
+    /**
+     * Vraća id sljedeće trgovine.
+     * Ova metoda pretražuje postojeće trgovine iz datoteke koristeći {@link FileReaderUtil},
+     * određuje najveći id među njima i vraća id sljedeće trgovine  kao id najvećeg plus jedan.
+     *
+     * @return Id sljedeće trgovine.
+     */
+
     public static Long getNextStoreId(){
         List<Store> stores = FileReaderUtil.getStoresFromFile(getItemsFromFile(getCategoriesFromFile()));
         Long storeId = stores.stream().map(NamedEntity::getId).max(Comparator.naturalOrder()).get();
@@ -48,6 +80,15 @@ public class FileWriterUtil {
 
     }
 
+
+    /**
+     * Sprema listu artikala u datoteku.
+     * Ova metoda prima listu artikala i sprema ih u datoteku koristeći PrintWriter.
+     * Za svaki artikl, zapisuje različite atribute ovisno o tipu artikla (Edible, Technical ili općenito Item).
+     * Ako dođe do greške prilikom pisanja u datoteku, zapisuje se poruka o pogrešci u log i ispisuje se na konzoli.
+     *
+     * @param items Lista artikala koje treba spremiti.
+     */
 
     public static void saveItemsToFile(List<Item> items) {
         File itemsFile = new File(Constants.ITEMS_FILE_NAME);
@@ -90,6 +131,15 @@ public class FileWriterUtil {
         }
     }
 
+
+    /**
+     * Sprema listu kategorija u datoteku.
+     * Ova metoda prima listu kategorija i sprema ih u datoteku koristeći PrintWriter.
+     * Za svaku kategoriju, zapisuje njezin identifikator, naziv i opis.
+     * Ako dođe do greške prilikom pisanja u datoteku, zapisuje se poruka o pogrešci u log i ispisuje se na konzoli.
+     *
+     * @param categories Lista kategorija koje treba spremiti.
+     */
     static public void saveCategoriesToFile(List<Category> categories) {
         File categoriesFile = new File(Constants.CATEGORIES_FILE_NAME);
         try (PrintWriter pw = new PrintWriter(categoriesFile)) {
@@ -108,6 +158,16 @@ public class FileWriterUtil {
 
 
     }
+
+
+    /**
+     * Sprema listu tvornica u datoteku.
+     * Ova metoda prima listu tvornica i sprema ih u datoteku koristeći PrintWriter.
+     * Za svaku tvornicu, zapisuje njezin identifikator, naziv, identifikator adrese i popis identifikatora povezanih predmeta.
+     * Ako dođe do greške prilikom pisanja u datoteku, zapisuje se poruka o pogrešci u log i ispisuje se na konzoli.
+     *
+     * @param factories Lista tvornica koje treba spremiti.
+     */
 
     static public void saveFactoriesToFile(List<Factory> factories) {
 
@@ -136,6 +196,16 @@ public class FileWriterUtil {
     }
 
 
+    /**
+     * Sprema listu trgovina u datoteku.
+     * Ova metoda prima listu trgovina i sprema ih u datoteku koristeći PrintWriter.
+     * Za svaku trgovinu, zapisuje njezin identifikator, naziv, web adresu, popis identifikatora povezanih predmeta i vrstu trgovine.
+     * Ako je trgovina tipa hrana, dodatno zapisuje vrstu hrane (kikiriki maslac ili jabuke).
+     * Ako je trgovina tehničke vrste, zapisuje "Technical store".
+     * Ako dođe do greške prilikom pisanja u datoteku, zapisuje se poruka o pogrešci u log i ispisuje se na konzoli.
+     *
+     * @param stores Lista trgovina koje treba spremiti.
+     */
 
     static public void saveStoresToFile(List<Store> stores) {
 
