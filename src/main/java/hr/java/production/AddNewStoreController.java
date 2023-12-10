@@ -6,6 +6,7 @@ import hr.java.production.model.Address;
 import hr.java.production.model.Factory;
 import hr.java.production.model.Item;
 import hr.java.production.model.Store;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import hr.java.production.utility.FileWriterUtil;
 import javafx.collections.FXCollections;
@@ -49,8 +50,8 @@ public class AddNewStoreController {
         try{
 
             validateInputFields();
+            List <Store> stores = DatabaseUtil.getStores();
 
-            List<Store> stores = FileReaderUtil.getStoresFromFile(getItemsFromFile(getCategoriesFromFile()));
             Long storeId = FileWriterUtil.getNextStoreId();
             String storeName = storeNameTextField.getText();
             String storeWebAddress = storeWebAddressTextField.getText();

@@ -6,6 +6,7 @@ import hr.java.production.model.Address;
 import hr.java.production.model.Category;
 import hr.java.production.model.Factory;
 import hr.java.production.model.Item;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import hr.java.production.utility.FileWriterUtil;
 import javafx.collections.FXCollections;
@@ -59,7 +60,8 @@ public class AddNewFactoryController {
 
             validateInputFields();
 
-            List<Factory> factories = FileReaderUtil.getFactoriesFromFile(getItemsFromFile(getCategoriesFromFile()), getAdressesFromFile());
+            List<Factory> factories = DatabaseUtil.getFactories();
+
             Long factoryId = FileWriterUtil.getNextFactoryId();
             String factoryName = factoryNameTextField.getText();
             Address factoryAddress = factoryAddressComboBox.getSelectionModel().getSelectedItem();

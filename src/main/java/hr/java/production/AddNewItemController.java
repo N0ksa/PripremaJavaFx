@@ -4,6 +4,7 @@ import hr.java.production.exception.ValidationException;
 import hr.java.production.model.Category;
 import hr.java.production.model.Discount;
 import hr.java.production.model.Item;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import hr.java.production.utility.FileWriterUtil;
 import hr.java.production.utility.SafeInput;
@@ -69,8 +70,7 @@ public class AddNewItemController {
                     itemSellingPrice, new Discount(itemDiscount));
 
 
-            List<Item> items = FileReaderUtil.getItemsFromFile(categories);
-
+            List<Item> items = DatabaseUtil.getItems();
 
             items.add(newItem);
 

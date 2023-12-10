@@ -2,6 +2,7 @@ package hr.java.production;
 
 import hr.java.production.exception.ValidationException;
 import hr.java.production.model.Category;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import hr.java.production.utility.FileWriterUtil;
 import javafx.event.ActionEvent;
@@ -30,7 +31,7 @@ public class AddNewCategoryController {
 
             Category newCategory = new Category(categoryId,categoryName,categoryDescription);
 
-            List<Category> categories = FileReaderUtil.getCategoriesFromFile();
+            List<Category> categories = DatabaseUtil.getCategories();
             categories.add(newCategory);
             FileWriterUtil.saveCategoriesToFile(categories);
 

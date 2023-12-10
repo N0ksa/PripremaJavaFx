@@ -3,6 +3,7 @@ package hr.java.production;
 import hr.java.production.model.Factory;
 import hr.java.production.model.Item;
 import hr.java.production.model.Store;
+import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ObservableValue;
@@ -58,8 +59,11 @@ public class StoreSearchController {
 
 
     public void storeSearch(){
-        List<Item> itemList = FileReaderUtil.getItemsFromFile(FileReaderUtil.getCategoriesFromFile());
-        List<Store> storeList = FileReaderUtil.getStoresFromFile(itemList);
+        //List<Item> itemList = FileReaderUtil.getItemsFromFile(FileReaderUtil.getCategoriesFromFile());
+        //List<Store> storeList = FileReaderUtil.getStoresFromFile(itemList);
+
+        List<Store> storeList = DatabaseUtil.getStores();
+
 
         String factoryName = storeNameTextField.getText();
 
