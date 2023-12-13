@@ -491,6 +491,28 @@ public class DatabaseUtil {
 
     }
 
+    public static void saveAddresses(List<Address> addresses) {
+        try (Connection connection = connectToDatabase()) {
+
+            for (Address address: addresses){
+                String insertCategorySql = "INSERT INTO ADDRESS(STREET, HOUSE_NUMBER, CITY, POSTAL_CODE) VALUES(?, ?, ?, ?);";
+
+                PreparedStatement pstmt = connection.prepareStatement(insertCategorySql);
+                pstmt.setString(1, address.getStreet());
+                pstmt.setString(2, address.getHouseNumber());
+                pstmt.setString(3, address.getCity().getName());
+                pstmt.setString(4, address.getCity().getPostalCode());
+                pstmt.execute();
+            }
+
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod spremanja adresa u bazu podataka";
+            logger.error(message, ex);
+        }
+
+    }
+
     private static void mapResultSetToItemsList(ResultSet rs, List<Category> categories, List<Item> items) throws SQLException {
         while(rs.next()){
 

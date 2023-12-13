@@ -15,7 +15,7 @@ public class JavaFxApplication extends Application {
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("mainScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Priprema 8");
+        stage.setTitle("Priprema 9");
         stage.setScene(scene);
         stage.show();
     }

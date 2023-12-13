@@ -130,7 +130,21 @@ public class MenuController {
 
         try {
             Scene scene = new Scene(fxmlLoader.load());
-            JavaFxApplication.getMainStage().setTitle("Add Category");
+            JavaFxApplication.getMainStage().setTitle("Add Factory");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showAddNewAddress(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addNewAddress.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Address");
             JavaFxApplication.getMainStage().setScene(scene);
             JavaFxApplication.getMainStage().show();
 

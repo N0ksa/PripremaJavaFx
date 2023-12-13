@@ -38,6 +38,11 @@
                <MenuItem mnemonicParsing="false" onAction="#showAddNewCategory" text="Add new Category" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="Address">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#showAddNewAddress" text="Add address" />
+            </items>
+         </Menu>
         </menus>
     </MenuBar>
 
