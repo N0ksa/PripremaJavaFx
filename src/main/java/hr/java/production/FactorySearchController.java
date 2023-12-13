@@ -1,5 +1,6 @@
 package hr.java.production;
 
+import hr.java.production.filter.FactoryFilter;
 import hr.java.production.model.Category;
 import hr.java.production.model.Factory;
 import hr.java.production.model.Item;
@@ -59,16 +60,12 @@ public class FactorySearchController {
 
 
     public void factorySearch(){
-        //List <Item> itemList = FileReaderUtil.getItemsFromFile(FileReaderUtil.getCategoriesFromFile());
-        //List<Factory> factoryList = FileReaderUtil.getFactoriesFromFile(itemList, FileReaderUtil.getAdressesFromFile());
 
-        List<Factory> factoryList = DatabaseUtil.getFactories();
 
         String factoryName = factoryNameTextField.getText();
+        FactoryFilter factoryFilter = new FactoryFilter(factoryName);
 
-        List<Factory> filteredFactoryList = factoryList.stream()
-                .filter(category -> category.getName().contains(factoryName))
-                .collect(Collectors.toList());
+        List <Factory> filteredFactoryList = DatabaseUtil.getFactoriesByFilters(factoryFilter);
 
         ObservableList<Factory> observableFactoryList = FXCollections.observableList(filteredFactoryList);
         factoriesTableView.setItems(observableFactoryList);

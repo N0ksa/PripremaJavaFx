@@ -40,15 +40,15 @@ public class AddNewFactoryController {
 
     public void initialize(){
 
-        categories = FileReaderUtil.getCategoriesFromFile();
+        categories = DatabaseUtil.getCategories();
 
         factoryItemsListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        List<Item> items = FileReaderUtil.getItemsFromFile(categories);
+        List<Item> items = DatabaseUtil.getItems();
         ObservableList<Item> observableItemsList = FXCollections.observableList(items);
         factoryItemsListView.setItems(observableItemsList);
 
-        ObservableList<Address> observableAddressesList = FXCollections.observableList(FileReaderUtil.getAdressesFromFile());
+        ObservableList<Address> observableAddressesList = FXCollections.observableList(DatabaseUtil.getAddresses());
         factoryAddressComboBox.setItems(observableAddressesList);
 
 
@@ -60,7 +60,7 @@ public class AddNewFactoryController {
 
             validateInputFields();
 
-            List<Factory> factories = DatabaseUtil.getFactories();
+            List<Factory> factories = new ArrayList<>();
 
             Long factoryId = FileWriterUtil.getNextFactoryId();
             String factoryName = factoryNameTextField.getText();
@@ -71,7 +71,7 @@ public class AddNewFactoryController {
 
             factories.add(newFactory);
 
-            FileWriterUtil.saveFactoriesToFile(factories);
+            DatabaseUtil.saveFactories(factories);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Spremanje uspješno");

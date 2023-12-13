@@ -25,15 +25,15 @@ public class AddNewCategoryController {
         try{
             validateInputFields();
 
-            Long categoryId = FileWriterUtil.getNextCategoryId();
+            Long categoryId = 0L;
             String categoryName = categoryNameTextField.getText();
             String categoryDescription = categoryDescriptionTextArea.getText();
 
             Category newCategory = new Category(categoryId,categoryName,categoryDescription);
 
-            List<Category> categories = DatabaseUtil.getCategories();
+            List<Category> categories = new ArrayList<>();
             categories.add(newCategory);
-            FileWriterUtil.saveCategoriesToFile(categories);
+            DatabaseUtil.saveCategories(categories);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Spremanje uspješno");

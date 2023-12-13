@@ -1,8 +1,10 @@
 package hr.java.production;
 
 import hr.java.production.constants.Constants;
+import hr.java.production.filter.ItemFilter;
 import hr.java.production.model.Category;
 import hr.java.production.model.Item;
+import hr.java.production.model.NamedEntity;
 import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
@@ -24,7 +26,7 @@ public class ItemSearchController{
     @FXML
     private TextField itemNameTextField;
     @FXML
-    private ComboBox<String> categoryComboBox;
+    private ComboBox<Category> categoryComboBox;
     @FXML
     private TableView<Item> itemsTableView;
 
@@ -46,11 +48,10 @@ public class ItemSearchController{
 
     public void initialize(){
 
-        List<String> categoryList = FileReaderUtil.getCategoriesFromFile()
-                .stream().map(category -> category.getName())
-                .collect(Collectors.toList());
+        List<Category> categoryListString = DatabaseUtil.getCategories();
 
-        ObservableList<String> observableCategoryList = FXCollections.observableList(categoryList);
+
+        ObservableList<Category> observableCategoryList = FXCollections.observableList(categoryListString);
         categoryComboBox.setItems(observableCategoryList);
 
         itemNameTableColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Item,String>, ObservableValue<String>>() {
@@ -97,22 +98,15 @@ public class ItemSearchController{
     }
 
     public void itemSearch(){
-        //List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
-        //List<Item> itemList = FileReaderUtil.getItemsFromFile(categoryList);
 
-        List<Item> itemList = DatabaseUtil.getItems();
-
-        String itemCategoryText = categoryComboBox.getValue();
+        Category itemCategory = categoryComboBox.getValue();
         String itemName = itemNameTextField.getText();
 
-        List<Item> filtereditemList = itemList.stream().filter(item -> item.getName().contains(itemName)).collect(Collectors.toList());
-        if(itemCategoryText != null){
-            filtereditemList = filtereditemList.stream().filter(item -> item.getCategory().getName().equalsIgnoreCase(itemCategoryText)).collect(Collectors.toList());
-        }
+        ItemFilter itemFilter = new ItemFilter(itemName, itemCategory);
 
+        List<Item> filteredItemList = DatabaseUtil.getItemsByFilters(itemFilter);
 
-
-        ObservableList<Item> observableItemList = FXCollections.observableList(filtereditemList);
+        ObservableList<Item> observableItemList = FXCollections.observableList(filteredItemList);
         itemsTableView.setItems(observableItemList);
     }
 }

@@ -39,11 +39,9 @@ public class AddNewItemController {
     @FXML
     private ComboBox<Category> itemCategoryComboBox;
 
-    private static List<Category> categories;
-
 
     public void initialize(){
-        categories =  FileReaderUtil.getCategoriesFromFile();
+        List <Category> categories =  DatabaseUtil.getCategories();
         ObservableList<Category> observableCategoriesList = FXCollections.observableList(categories);
 
         itemCategoryComboBox.setItems(observableCategoriesList);
@@ -56,9 +54,11 @@ public class AddNewItemController {
         try {
             validateInputFields();
 
-            Long itemId = FileWriterUtil.getNextItemId();
+            Long itemId = 0L;
             String itemName = itemNameTextField.getText();
             Category itemCategory = itemCategoryComboBox.getValue();
+            System.out.println(itemCategory.getId());
+            System.out.println(itemCategory.getName());
             BigDecimal itemWidth = new BigDecimal(itemWidthTextField.getText());
             BigDecimal itemHeight = new BigDecimal(itemHeightTextField.getText());
             BigDecimal itemLength = new BigDecimal(itemLengthTextField.getText());
@@ -70,12 +70,10 @@ public class AddNewItemController {
                     itemSellingPrice, new Discount(itemDiscount));
 
 
-            List<Item> items = DatabaseUtil.getItems();
-
+            List<Item> items = new ArrayList<>();
             items.add(newItem);
 
-
-            FileWriterUtil.saveItemsToFile(items);
+            DatabaseUtil.saveItems(items);
 
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

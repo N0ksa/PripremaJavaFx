@@ -39,7 +39,7 @@ public class AddNewStoreController {
     public void initialize(){
         storeItemsListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        List<Item> items = FileReaderUtil.getItemsFromFile(FileReaderUtil.getCategoriesFromFile());
+        List<Item> items = DatabaseUtil.getItems();
         ObservableList<Item> observableItemsList = FXCollections.observableList(items);
         storeItemsListView.setItems(observableItemsList);
     }
@@ -50,9 +50,9 @@ public class AddNewStoreController {
         try{
 
             validateInputFields();
-            List <Store> stores = DatabaseUtil.getStores();
+            List <Store> stores = new ArrayList<>();
 
-            Long storeId = FileWriterUtil.getNextStoreId();
+            Long storeId = 0L;
             String storeName = storeNameTextField.getText();
             String storeWebAddress = storeWebAddressTextField.getText();
 
@@ -62,7 +62,7 @@ public class AddNewStoreController {
 
             stores.add(newStore);
 
-            FileWriterUtil.saveStoresToFile(stores);
+            DatabaseUtil.saveStores(stores);
 
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

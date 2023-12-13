@@ -1,5 +1,6 @@
 package hr.java.production;
 
+import hr.java.production.filter.StoreFilter;
 import hr.java.production.model.Factory;
 import hr.java.production.model.Item;
 import hr.java.production.model.Store;
@@ -59,17 +60,10 @@ public class StoreSearchController {
 
 
     public void storeSearch(){
-        //List<Item> itemList = FileReaderUtil.getItemsFromFile(FileReaderUtil.getCategoriesFromFile());
-        //List<Store> storeList = FileReaderUtil.getStoresFromFile(itemList);
-
-        List<Store> storeList = DatabaseUtil.getStores();
-
-
         String factoryName = storeNameTextField.getText();
 
-        List<Store> filteredFactoryList = storeList.stream()
-                .filter(store -> store.getName().contains(factoryName))
-                .collect(Collectors.toList());
+        StoreFilter storeFilter = new StoreFilter(factoryName);
+        List <Store> filteredFactoryList = DatabaseUtil.getStoresByFilters(storeFilter);
 
         ObservableList<Store> observableFactoryList = FXCollections.observableList(filteredFactoryList);
         storesTableView.setItems(observableFactoryList);

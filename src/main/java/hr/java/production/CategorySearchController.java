@@ -1,5 +1,6 @@
 package hr.java.production;
 
+import hr.java.production.filter.CategoryFilter;
 import hr.java.production.model.Category;
 import hr.java.production.model.Item;
 import hr.java.production.utility.DatabaseUtil;
@@ -47,14 +48,13 @@ public class CategorySearchController {
 
 
     public void categorySearch(){
-        //List<Category> categoryList = FileReaderUtil.getCategoriesFromFile();
-        List<Category> categoryList = DatabaseUtil.getCategories();
+
+
 
         String categoryName = categoryNameTextField.getText();
+        CategoryFilter categoryFilter = new CategoryFilter(categoryName);
 
-        List<Category> filteredCategoryList = categoryList.stream()
-                .filter(category -> category.getName().contains(categoryName))
-                .collect(Collectors.toList());
+        List<Category> filteredCategoryList = DatabaseUtil.getCategoriesByFilters(categoryFilter);
 
         ObservableList<Category> observableCategoryList = FXCollections.observableList(filteredCategoryList);
         categoriesTableView.setItems(observableCategoryList);

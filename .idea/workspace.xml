@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Dodao logback.xml koji konfigurira kako će se logovi zapisivati&#10;- dodao i logove">
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/filter/CategoryFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/filter/FactoryFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/filter/ItemFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/filter/StoreFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/pogreske.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pogreske.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewCategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewFactoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewStoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/FactorySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/FactorySearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/StoreSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/StoreSearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" afterDir="false" />
     </list>
@@ -48,7 +55,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_directory_selection&quot;: &quot;E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 8/sarko-08/src/main/java/hr/java/production&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Primjeri sa predavanja/Predavanje drugo javafx i baze podataka&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -110,7 +117,10 @@
       <workItem from="1702140002265" duration="1027000" />
       <workItem from="1702141415755" duration="8236000" />
       <workItem from="1702151939896" duration="2165000" />
-      <workItem from="1702218955882" duration="2640000" />
+      <workItem from="1702218955882" duration="4786000" />
+      <workItem from="1702285753219" duration="21000" />
+      <workItem from="1702404697692" duration="80000" />
+      <workItem from="1702477103796" duration="14899000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -175,7 +185,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1702149344530</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka">
+      <option name="closed" value="true" />
+      <created>1702221681734</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1702221681734</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +219,19 @@
     <MESSAGE value="Završio 8.pripremu&#10;&#10;-dodao mogućnost dodavanja trgovina i tvornica putem grafičkog sučelja.&#10;-dodao provjeru validnosti unosa podataka od strane korisnika (u slučaju kada korisnik krivo unese ne dolazi do zapisivanja u datoteku)" />
     <MESSAGE value="Počeo raditi 9.pripremu&#10;&#10;- dodao novu klasu DatabaseUtil.java pomoću koje će se dohvaćati podati iz baze podataka&#10;-napravio metode za dohvat kategorija i artikala iz baze podataka" />
     <MESSAGE value="Dodao logback.xml koji konfigurira kako će se logovi zapisivati&#10;- dodao i logove" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodao logback.xml koji konfigurira kako će se logovi zapisivati&#10;- dodao i logove" />
+    <MESSAGE value="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka" />
+    <option name="LAST_COMMIT_MESSAGE" value="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java</url>
+          <line>318</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
