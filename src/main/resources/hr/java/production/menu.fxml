@@ -24,12 +24,16 @@
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#showFactoriesScreen" text="Search" />
                <MenuItem mnemonicParsing="false" onAction="#showAddNewFactoriesScreen" text="Add new Factory" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddItemsToFactory" text="Add items to Factory" />
+               <MenuItem mnemonicParsing="false" onAction="#showDeleteItemsFromFactory" text="Delete items from Factory" />
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Store">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#showStoresScreen" text="Search" />
                <MenuItem mnemonicParsing="false" onAction="#showAddNewStoresScreen" text="Add new Store" />
+               <MenuItem mnemonicParsing="false" onAction="#showAddItemsToStore" text="Add items to Store" />
+               <MenuItem mnemonicParsing="false" onAction="#showDeleteItemsFromStore" text="Delete items from Store" />
                 </items>
             </Menu>
          <Menu mnemonicParsing="false" text="Category">

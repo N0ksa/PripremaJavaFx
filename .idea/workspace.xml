@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Promijenio način filtriranja i dodavanja stvari.&#10;&#10;-sada se tvornice, trgovine, artikli i kategorije dodaju u bazu podataka, a ne u datoteku.&#10;&#10;-prilikom traženja se dohvaća samo tražena vrijednost iz baze podataka s pomoću sql upita umjesto da se dohvaćaju sve vrijednosti i onda filtriraju u odnosu na traženu.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddNewAddressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addNewAddress.fxml" afterDir="false" />
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Dodao mogućnost dodavanja novih adresa.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddItemsToFactoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddItemsToStoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/DeleteItemsFromFactoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/DeleteItemsFromStoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addItemsToFactory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addItemsToStore.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/deleteItemsFromFactory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/deleteItemsFromStore.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pogreske.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pogreske.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/JavaFxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/JavaFxApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,22 +60,23 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_directory_selection": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/java/hr/java/production",
-    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09",
+    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/resources/hr/java/production",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 9\sarko-09\src\main\resources\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 8\sarko-08\src\main\resources\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07\src\main\resources\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07\src\main\java\hr\java\production" />
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07" />
-      <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 7\sarko-07\src\main\java\hr\java\production\model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="hr.java.production" />
@@ -113,7 +126,8 @@
       <workItem from="1702218955882" duration="4786000" />
       <workItem from="1702285753219" duration="21000" />
       <workItem from="1702404697692" duration="80000" />
-      <workItem from="1702477103796" duration="19801000" />
+      <workItem from="1702477103796" duration="20667000" />
+      <workItem from="1702562360397" duration="8678000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -192,7 +206,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1702492867700</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Dodao mogućnost dodavanja novih adresa.">
+      <option name="closed" value="true" />
+      <created>1702500801971</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1702500801971</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +242,8 @@
     <MESSAGE value="Dodao logback.xml koji konfigurira kako će se logovi zapisivati&#10;- dodao i logove" />
     <MESSAGE value="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka" />
     <MESSAGE value="Promijenio način filtriranja i dodavanja stvari.&#10;&#10;-sada se tvornice, trgovine, artikli i kategorije dodaju u bazu podataka, a ne u datoteku.&#10;&#10;-prilikom traženja se dohvaća samo tražena vrijednost iz baze podataka s pomoću sql upita umjesto da se dohvaćaju sve vrijednosti i onda filtriraju u odnosu na traženu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Promijenio način filtriranja i dodavanja stvari.&#10;&#10;-sada se tvornice, trgovine, artikli i kategorije dodaju u bazu podataka, a ne u datoteku.&#10;&#10;-prilikom traženja se dohvaća samo tražena vrijednost iz baze podataka s pomoću sql upita umjesto da se dohvaćaju sve vrijednosti i onda filtriraju u odnosu na traženu." />
+    <MESSAGE value="Dodao mogućnost dodavanja novih adresa." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodao mogućnost dodavanja novih adresa." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

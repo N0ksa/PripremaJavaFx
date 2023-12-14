@@ -12,7 +12,7 @@ public class MenuController {
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("mainScreen.fxml"));
         try{
             Scene scene = new Scene(fxmlLoader.load());
-            JavaFxApplication.getMainStage().setTitle("Priprema 7");
+            JavaFxApplication.getMainStage().setTitle("Priprema 9");
             JavaFxApplication.getMainStage().setScene(scene);
             JavaFxApplication.getMainStage().show();
 
@@ -116,7 +116,7 @@ public class MenuController {
 
         try {
             Scene scene = new Scene(fxmlLoader.load());
-            JavaFxApplication.getMainStage().setTitle("Add Category");
+            JavaFxApplication.getMainStage().setTitle("Add Store");
             JavaFxApplication.getMainStage().setScene(scene);
             JavaFxApplication.getMainStage().show();
 
@@ -145,6 +145,62 @@ public class MenuController {
         try {
             Scene scene = new Scene(fxmlLoader.load());
             JavaFxApplication.getMainStage().setTitle("Add Address");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showAddItemsToFactory(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addItemsToFactory.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Items To Factory");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showDeleteItemsFromFactory(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("deleteItemsFromFactory.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Delete Items from Factory");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showAddItemsToStore(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("addItemsToStore.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Add Items To Store");
+            JavaFxApplication.getMainStage().setScene(scene);
+            JavaFxApplication.getMainStage().show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void showDeleteItemsFromStore(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxApplication.class.getResource("deleteItemsFromStore.fxml"));
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            JavaFxApplication.getMainStage().setTitle("Delete items from Store");
             JavaFxApplication.getMainStage().setScene(scene);
             JavaFxApplication.getMainStage().show();
 

@@ -277,7 +277,7 @@ public class DatabaseUtil {
 
     }
 
-    private static Set<Item> getItemsForStore(Long storeId, List<Item> items){
+    public static Set<Item> getItemsForStore(Long storeId, List<Item> items){
         Set<Item> storeItems = new HashSet<>();
         try(Connection connection = connectToDatabase()){
             String sqlQuery = String.format("SELECT * FROM STORE_ITEM SI, ITEM I WHERE SI.STORE_ID = %d AND SI.ITEM_ID = I.ID", storeId);
@@ -302,6 +302,36 @@ public class DatabaseUtil {
 
         return storeItems;
     }
+
+    public static Set<Item> getItemsNotInStore(Long storeId, List<Item> items) {
+        Set<Item> nonStoreItems = new HashSet<>();
+        try (Connection connection = connectToDatabase()) {
+
+            String sqlQuery = String.format("SELECT I.* FROM ITEM I " +
+                    "LEFT JOIN STORE_ITEM SI ON I.ID = SI.ITEM_ID AND SI.STORE_ID = %d " +
+                    "WHERE SI.STORE_ID IS NULL", storeId);
+
+            Statement stmt = connection.createStatement();
+            stmt.execute(sqlQuery);
+            ResultSet rs = stmt.getResultSet();
+
+            while (rs.next()) {
+                Long itemId = rs.getLong("ID");
+
+                Optional<Item> nonStoreItem = items.stream()
+                        .filter(item -> item.getId().equals(itemId)).findFirst();
+                nonStoreItem.ifPresent(nonStoreItems::add);
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod povezivanja na bazu podataka prilikom dohvaćanja dostupnih " +
+                    "artikala za trgovinu";
+            logger.error(message, ex);
+        }
+
+        return nonStoreItems;
+    }
+
 
     public static void saveStores(List<Store> stores) {
         try (Connection connection = connectToDatabase()) {
@@ -334,6 +364,40 @@ public class DatabaseUtil {
         }
     }
 
+    public static void addItemsToStore(Store store, List<Item> itemsToAdd) {
+        try (Connection connection = connectToDatabase()) {
+            String insertItemsIntoStoreSql = "INSERT INTO STORE_ITEM(STORE_ID, ITEM_ID) VALUES(?, ?);";
+
+            for (Item item : itemsToAdd) {
+                try (PreparedStatement pstmt = connection.prepareStatement(insertItemsIntoStoreSql)) {
+                    pstmt.setInt(1, store.getId().intValue());
+                    pstmt.setInt(2, item.getId().intValue());
+                    pstmt.executeUpdate();
+                }
+            }
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod spremanja artikala u bazu podataka";
+            logger.error(message, ex);
+        }
+    }
+
+    public static void deleteItemsFromStore(Store store, List<Item> itemsToRemove) {
+        try (Connection connection = connectToDatabase()) {
+            String deleteItemsFromStoreSql = "DELETE FROM STORE_ITEM WHERE STORE_ID = ? AND ITEM_ID = ?;";
+
+            for (Item item : itemsToRemove) {
+                try (PreparedStatement pstmt = connection.prepareStatement(deleteItemsFromStoreSql)) {
+                    pstmt.setInt(1, store.getId().intValue());
+                    pstmt.setInt(2, item.getId().intValue());
+                    pstmt.executeUpdate();
+                }
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod spremanja artikala u bazu podataka";
+            logger.error(message, ex);
+        }
+    }
 
 
     public static List<Factory> getFactories(){
@@ -399,7 +463,7 @@ public class DatabaseUtil {
     }
 
 
-    private static Set<Item> getItemsForFactory(Long factoryId, List<Item> items){
+   public static Set<Item> getItemsForFactory(Long factoryId, List<Item> items){
         Set<Item> factoryItems = new HashSet<>();
         try(Connection connection = connectToDatabase()){
             String sqlQuery = String.format("SELECT * FROM FACTORY_ITEM SI, ITEM I WHERE SI.FACTORY_ID = %d AND SI.ITEM_ID = I.ID", factoryId);
@@ -425,14 +489,44 @@ public class DatabaseUtil {
         return factoryItems;
     }
 
+    public static Set<Item> getItemsNotInFactory(Long factoryId, List<Item> items) {
+        Set<Item> nonFactoryItems = new HashSet<>();
+        try (Connection connection = connectToDatabase()) {
+            
+            String sqlQuery = String.format("SELECT I.* FROM ITEM I " +
+                    "LEFT JOIN FACTORY_ITEM SI ON I.ID = SI.ITEM_ID AND SI.FACTORY_ID = %d " +
+                    "WHERE SI.FACTORY_ID IS NULL", factoryId);
+
+            Statement stmt = connection.createStatement();
+            stmt.execute(sqlQuery);
+            ResultSet rs = stmt.getResultSet();
+
+            while (rs.next()) {
+                Long itemId = rs.getLong("ID");
+
+                Optional<Item> nonFactoryItem = items.stream()
+                        .filter(item -> item.getId().equals(itemId)).findFirst();
+                nonFactoryItem.ifPresent(nonFactoryItems::add);
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod povezivanja na bazu podataka prilikom dohvaćanja dostupnih " +
+                    "artikala za tvornicu";
+            logger.error(message, ex);
+        }
+
+        return nonFactoryItems;
+    }
+
+
 
     public static void saveFactories(List<Factory> factories) {
         try (Connection connection = connectToDatabase()) {
             for (Factory factory: factories) {
-                String insertStoreSql = "INSERT INTO FACTORY(NAME, ADDRESS_ID) VALUES(?, ?);";
+                String insertFactorySql = "INSERT INTO FACTORY(NAME, ADDRESS_ID) VALUES(?, ?);";
 
 
-                PreparedStatement pstmt = connection.prepareStatement(insertStoreSql, PreparedStatement.RETURN_GENERATED_KEYS);
+                PreparedStatement pstmt = connection.prepareStatement(insertFactorySql, PreparedStatement.RETURN_GENERATED_KEYS);
                 pstmt.setString(1, factory.getName());
                 pstmt.setInt(2, factory.getAdress().getAddressId().intValue());
                 pstmt.executeUpdate();
@@ -443,8 +537,8 @@ public class DatabaseUtil {
                     int factoryId = generatedKeys.getInt(1);
 
                     for (Item item : factory.getItems()) {
-                        String insertItemsIntoStoreSql = "INSERT INTO FACTORY_ITEM(FACTORY_ID, ITEM_ID) VALUES(?, ?);";
-                        pstmt = connection.prepareStatement(insertItemsIntoStoreSql);
+                        String insertItemsIntoFactorySql = "INSERT INTO FACTORY_ITEM(FACTORY_ID, ITEM_ID) VALUES(?, ?);";
+                        pstmt = connection.prepareStatement(insertItemsIntoFactorySql);
                         pstmt.setInt(1, factoryId);
                         pstmt.setInt(2, item.getId().intValue());
                         pstmt.executeUpdate();
@@ -456,6 +550,43 @@ public class DatabaseUtil {
             logger.error(message, ex);
         }
     }
+
+    public static void addItemsToFactory(Factory factory, List<Item> itemsToAdd){
+        try (Connection connection = connectToDatabase()) {
+
+            String insertItemsIntoFactorySql = "INSERT INTO FACTORY_ITEM(FACTORY_ID, ITEM_ID) VALUES(?, ?);";
+
+            for (Item item : itemsToAdd) {
+                PreparedStatement pstmt = connection.prepareStatement(insertItemsIntoFactorySql);
+                pstmt.setInt(1, factory.getId().intValue());
+                pstmt.setInt(2, item.getId().intValue());
+                pstmt.executeUpdate();
+            }
+        }catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod spremanja artikala u bazu podataka";
+            logger.error(message, ex);
+        }
+    }
+
+    public static void deleteItemsFromFactory(Factory factory, List<Item> itemsToRemove) {
+        try (Connection connection = connectToDatabase()) {
+
+            String deleteItemsFromFactorySql = "DELETE FROM FACTORY_ITEM WHERE FACTORY_ID = ? AND ITEM_ID = ?;";
+
+            for (Item item : itemsToRemove) {
+                try (PreparedStatement pstmt = connection.prepareStatement(deleteItemsFromFactorySql)) {
+                    pstmt.setInt(1, factory.getId().intValue());
+                    pstmt.setInt(2, item.getId().intValue());
+                    pstmt.executeUpdate();
+                }
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod brisanja artikala iz baze podataka";
+            logger.error(message, ex);
+        }
+    }
+
 
 
 

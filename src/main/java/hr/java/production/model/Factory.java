@@ -77,4 +77,9 @@ public class Factory extends NamedEntity implements Serializable {
                 .orElse(null);
 
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

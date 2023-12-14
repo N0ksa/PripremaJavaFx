@@ -98,4 +98,9 @@ public class Store extends NamedEntity implements Serializable {
     public int hashCode() {
         return Objects.hash(webAddress, items);
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
