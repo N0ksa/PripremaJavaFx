@@ -8,23 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Dodao mogućnost dodavanja novih adresa.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddItemsToFactoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/AddItemsToStoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/DeleteItemsFromFactoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/DeleteItemsFromStoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addItemsToFactory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/addItemsToStore.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/deleteItemsFromFactory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/deleteItemsFromStore.fxml" afterDir="false" />
+    <list default="true" id="32120a75-3c32-446a-9f58-6ea04c447ee1" name="Changes" comment="Dodao mogućnost dodavanja artikala u tvornice i trgovine i mogućnost brisanja artikala iz tvornice ili trgovine.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pogreske.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pogreske.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/model/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/CategorySearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/FactorySearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/FactorySearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/ItemSearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/StoreSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/StoreSearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/java/production/utility/DatabaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/mainScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/category.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/factory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/factory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/items.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/items.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hr/java/production/store.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hr/java/production/store.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,24 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_directory_selection": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/java/hr/java/production",
-    "last_opened_file_path": "E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/resources/hr/java/production",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/java/hr/java/production&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Tehničko veleučilište Zagreb/Kolegiji druga godina/Treći semestar/Programiranje u jeziku Java/Moja godina/Laboratorijske vjezbe/Priprema 9/sarko-09/src/main/resources/hr/java/production&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Tehničko veleučilište Zagreb\Kolegiji druga godina\Treći semestar\Programiranje u jeziku Java\Moja godina\Laboratorijske vjezbe\Priprema 9\sarko-09\src\main\resources\hr\java\production" />
@@ -127,7 +122,8 @@
       <workItem from="1702285753219" duration="21000" />
       <workItem from="1702404697692" duration="80000" />
       <workItem from="1702477103796" duration="20667000" />
-      <workItem from="1702562360397" duration="8678000" />
+      <workItem from="1702562360397" duration="8996000" />
+      <workItem from="1702576275517" duration="4581000" />
     </task>
     <task id="LOCAL−00001" summary="Učitao podatke za Item.java klasu u tablicu i dodao metodu koja filtrira artikle po imenu koje je uneseno od strane korisnika u grafičkom sučelju.">
       <option name="closed" value="true" />
@@ -213,7 +209,14 @@
       <option name="presentableId" value="LOCAL−00012" />
       <updated>1702500801971</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL−00013" summary="Dodao mogućnost dodavanja artikala u tvornice i trgovine i mogućnost brisanja artikala iz tvornice ili trgovine.">
+      <option name="closed" value="true" />
+      <created>1702571098995</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1702571098996</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +246,8 @@
     <MESSAGE value="Povezao sve podatke sa bazom podataka, odnosno sada se svi podaci učitavaju iz baze podataka umjesto iz datoteka.&#10;&#10;-potrebno je sada dodati opcije dodavanja novih podataka u bazu podataka" />
     <MESSAGE value="Promijenio način filtriranja i dodavanja stvari.&#10;&#10;-sada se tvornice, trgovine, artikli i kategorije dodaju u bazu podataka, a ne u datoteku.&#10;&#10;-prilikom traženja se dohvaća samo tražena vrijednost iz baze podataka s pomoću sql upita umjesto da se dohvaćaju sve vrijednosti i onda filtriraju u odnosu na traženu." />
     <MESSAGE value="Dodao mogućnost dodavanja novih adresa." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodao mogućnost dodavanja novih adresa." />
+    <MESSAGE value="Dodao mogućnost dodavanja artikala u tvornice i trgovine i mogućnost brisanja artikala iz tvornice ili trgovine." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodao mogućnost dodavanja artikala u tvornice i trgovine i mogućnost brisanja artikala iz tvornice ili trgovine." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

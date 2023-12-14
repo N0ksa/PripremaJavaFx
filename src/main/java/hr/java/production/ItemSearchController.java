@@ -1,24 +1,32 @@
 package hr.java.production;
 
 import hr.java.production.constants.Constants;
+import hr.java.production.enums.ValidationRegex;
+import hr.java.production.exception.ValidationException;
 import hr.java.production.filter.ItemFilter;
 import hr.java.production.model.Category;
 import hr.java.production.model.Item;
 import hr.java.production.model.NamedEntity;
+import hr.java.production.model.Store;
 import hr.java.production.utility.DatabaseUtil;
 import hr.java.production.utility.FileReaderUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ItemSearchController{
@@ -108,5 +116,55 @@ public class ItemSearchController{
 
         ObservableList<Item> observableItemList = FXCollections.observableList(filteredItemList);
         itemsTableView.setItems(observableItemList);
+    }
+
+    public void deleteItem(ActionEvent actionEvent) {
+        Item itemToDelete = itemsTableView.getSelectionModel().getSelectedItem();
+
+        try {
+            validateInputFields();
+            DatabaseUtil.deleteItem(itemToDelete);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Spremanje uspješno");
+            alert.setHeaderText("Brisanje artikla je bilo uspješno!");
+            alert.setContentText("Artikl: " + itemToDelete.getName() + " uspješno se obrisao!");
+            alert.showAndWait();
+        }
+        catch (ValidationException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greška pri unosu");
+            alert.setHeaderText("Provjerite ispravnost unesenih podataka");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
+
+
+    }
+
+
+    private void validateInputFields() throws ValidationException {
+        List<String> errors = new ArrayList<>();
+        Item itemToDelete = itemsTableView.getSelectionModel().getSelectedItem();
+
+        if (Optional.ofNullable(itemToDelete).isEmpty()){
+            errors.add("Molim odaberite artikl koji želite obrisati");
+        }
+        else{
+
+            if(DatabaseUtil.itemInFactory(itemToDelete, DatabaseUtil.getFactories())){
+                errors.add("Artikl se koristi u jednoj ili više tvornica. Molim prvo obrišite artikl u tvornicama.");
+            }
+
+            if(DatabaseUtil.itemInStore(itemToDelete, DatabaseUtil.getStores())){
+                errors.add("Artikl se koristi u jednoj ili više trgovina. Molim prvo obrišite artikl u trgovinama.");
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            throw new ValidationException(String.join("\n", errors));
+        }
+
+
     }
 }

@@ -94,6 +94,31 @@ public class DatabaseUtil {
 
     }
 
+    public static boolean categoryInUse(Category category, List<Item> items) {
+        try (Connection connection = connectToDatabase()) {
+            String sqlQuery = "SELECT 1 FROM ITEM WHERE CATEGORY_ID = ?";
+
+            for (Item item : items) {
+                try (PreparedStatement pstmt = connection.prepareStatement(sqlQuery)) {
+                    pstmt.setLong(1, category.getId());
+
+                    try (ResultSet rs = pstmt.executeQuery()) {
+                        if (rs.next()) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod povezivanja na bazu podataka";
+            logger.error(message, ex);
+        }
+
+        return false;
+    }
+
+
     public static void saveCategories(List<Category> categories) {
         try (Connection connection = connectToDatabase()) {
 
@@ -113,6 +138,22 @@ public class DatabaseUtil {
         }
 
     }
+
+    public static void deleteCategory(Category categoryToDelete) {
+        try (Connection connection = connectToDatabase()) {
+            String deleteCategorySql = "DELETE FROM CATEGORY WHERE ID = ?";
+
+            try (PreparedStatement pstmt = connection.prepareStatement(deleteCategorySql)) {
+                pstmt.setLong(1, categoryToDelete.getId());
+                pstmt.executeUpdate();
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod brisanja kategorije iz baze podataka";
+            logger.error(message, ex);
+        }
+    }
+
 
 
 
@@ -216,6 +257,21 @@ public class DatabaseUtil {
         }
 
     }
+
+    public static void deleteItem(Item item) {
+        try (Connection connection = connectToDatabase()) {
+            String deleteItemSql = "DELETE FROM ITEM WHERE ID = ?";
+
+            PreparedStatement pstmt = connection.prepareStatement(deleteItemSql);
+            pstmt.setInt(1, item.getId().intValue());
+            pstmt.execute();
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod brisanja artikla iz baze podataka";
+            logger.error(message, ex);
+        }
+    }
+
 
     public static List<Store> getStores(){
         List <Item> items = getItems();
@@ -332,6 +388,32 @@ public class DatabaseUtil {
         return nonStoreItems;
     }
 
+    public static boolean itemInStore(Item item, List<Store> stores) {
+        try (Connection connection = connectToDatabase()) {
+            String sqlQuery = "SELECT 1 FROM STORE_ITEM WHERE STORE_ID = ? AND ITEM_ID = ?";
+
+            for (Store store : stores) {
+                try (PreparedStatement pstmt = connection.prepareStatement(sqlQuery)) {
+                    pstmt.setLong(1, store.getId());
+                    pstmt.setLong(2, item.getId());
+
+                    try (ResultSet rs = pstmt.executeQuery()) {
+                        if (rs.next()) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod povezivanja na bazu podataka";
+            logger.error(message, ex);
+        }
+
+        return false;
+    }
+
+
 
     public static void saveStores(List<Store> stores) {
         try (Connection connection = connectToDatabase()) {
@@ -380,6 +462,22 @@ public class DatabaseUtil {
             logger.error(message, ex);
         }
     }
+
+    public static void deleteStore(Store storeToDelete) {
+        try (Connection connection = connectToDatabase()) {
+            String deleteStoreSql = "DELETE FROM STORE WHERE ID = ?";
+
+            try (PreparedStatement pstmt = connection.prepareStatement(deleteStoreSql)) {
+                pstmt.setInt(1, storeToDelete.getId().intValue());
+                pstmt.executeUpdate();
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod brisanja trgovine iz baze podataka";
+            logger.error(message, ex);
+        }
+    }
+
 
     public static void deleteItemsFromStore(Store store, List<Item> itemsToRemove) {
         try (Connection connection = connectToDatabase()) {
@@ -518,6 +616,33 @@ public class DatabaseUtil {
         return nonFactoryItems;
     }
 
+    public static boolean itemInFactory(Item item, List<Factory> factories) {
+        try (Connection connection = connectToDatabase()) {
+            String sqlQuery = "SELECT 1 FROM FACTORY_ITEM WHERE FACTORY_ID = ? AND ITEM_ID = ?";
+
+            for (Factory factory : factories) {
+                try (PreparedStatement pstmt = connection.prepareStatement(sqlQuery)) {
+                    pstmt.setLong(1, factory.getId());
+                    pstmt.setLong(2, item.getId());
+
+                    try (ResultSet rs = pstmt.executeQuery()) {
+                        if (rs.next()) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod povezivanja na bazu podataka";
+            logger.error(message, ex);
+
+        }
+
+        return false;
+    }
+
+
 
 
     public static void saveFactories(List<Factory> factories) {
@@ -550,6 +675,24 @@ public class DatabaseUtil {
             logger.error(message, ex);
         }
     }
+
+    public static void deleteFactory(Factory factoryToDelete) {
+        try (Connection connection = connectToDatabase()) {
+            String deleteFactorySql = "DELETE FROM FACTORY WHERE ID = ?";
+
+            try (PreparedStatement pstmt = connection.prepareStatement(deleteFactorySql)) {
+                pstmt.setInt(1, factoryToDelete.getId().intValue());
+                pstmt.executeUpdate();
+
+            }
+
+        } catch (SQLException | IOException ex) {
+            String message = "Dogodila se pogreška kod brisanja tvornice iz baze podataka";
+            logger.error(message, ex);
+
+        }
+    }
+
 
     public static void addItemsToFactory(Factory factory, List<Item> itemsToAdd){
         try (Connection connection = connectToDatabase()) {
